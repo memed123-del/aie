@@ -558,24 +558,6 @@ body {
     font-weight: 400;
 }
 
-@media (max-width: 480px) {
-    .countdown-frame-img {
-        transform: translate(-50%, -50%) scale(1.8); /* Bunga lebih besar di HP */
-    }
-    
-    .countdown-item {
-        min-width: 45px; /* Lebih rapat lagi di HP */
-    }
-    
-    .countdown-number {
-        font-size: 1.4rem; /* Angka mengecil agar muat */
-    }
-
-    .countdown-content {
-        transform: translateY(10px); /* Geser angka naik/turun sedikit jika tidak pas di tengah */
-    }
-}
-
 /* Events Section */
 .section-events {
     background: var(--bg-cream);
