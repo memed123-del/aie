@@ -158,35 +158,29 @@ body {
 }
 
 .hero-frame {
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
+    width: 355px;
+    height: auto;
     margin: auto;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .frame-img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 140%;
-    height: 140%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    opacity: 1;
-    z-index: 1;
+    opacity: 0.6;
 }
 
 .hero-text {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: transparent;
     backdrop-filter: none;
+    box-shadow: none;
     text-shadow: 0 0 5px rgba(255,255,255,0.7);
 }
 
@@ -288,7 +282,6 @@ body {
     position: relative;
     box-shadow: -5px 0 20px rgba(0,0,0,0.05);
     border-left: 1px solid rgba(255,255,255,0.5);
-    overflow: visible;
 }
 
 /* ========== MUSIC CONTROL ========== */
@@ -369,34 +362,25 @@ body {
 }
 
 /* Couple Section */
-.section-couple {
-    overflow: visible;
-}
-
 .couple-card {
     margin: 30px 0;
-    overflow: visible;
 }
 
 .couple-photo-frame {
     position: relative;
-    width: 200px;
-    height: 260px;
-    margin: 0 auto 30px;
-    overflow: visible;
+    width: 220px;
+    height: 280px;
+    margin: 0 auto 20px;
 }
 
 .photo-frame-img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 130%;
-    height: 130%;
+    inset: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
     object-fit: contain;
-    z-index: 3;
+    z-index: 1;
     pointer-events: none;
-    opacity: 1;
 }
 
 .couple-photo {
@@ -407,7 +391,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .couple-name {
@@ -453,43 +437,37 @@ body {
 /* ========== COUNTDOWN SECTION - FULLY RESPONSIVE ========== */
 .section-countdown {
     background: var(--bg);
-    position: relative;
-    z-index: 100;
-    min-height: auto;background: transparent;
-
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 15px 180px 15px;
-    overflow: visible !important;
+    padding: 40px 15px;
 }
 
 .countdown-frame {
     position: relative;
-    width: min(95vw, 600px);
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 80px 40px;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
+    padding: 60px 30px;
+    background: var(--bg-cream);
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: visible;
 }
 
 .countdown-frame-img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 240%;
-    height: 240%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    opacity: 1;
+    opacity: 0.3;
     pointer-events: none;
-    z-index: 0;
+    border-radius: 15px;
 }
 
 .countdown-content {
@@ -511,23 +489,14 @@ body {
 .countdown-wrapper .row {
     max-width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 2px;
-}
-
-.countdown-wrapper .row .col-3 {
-    flex: 0 0 auto;
-    width: auto;
 }
 
 .countdown-item {
-    background: transparent;
-    padding: 5px 0
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
+    background: white;
+    padding: 15px 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(255,255,255,0.5);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -535,8 +504,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60px;
-    min-width: 35px;
+    min-height: 80px;
+}
+
+.countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-light), var(--gold));
+    opacity: 0.7;
 }
 
 .countdown-number {
