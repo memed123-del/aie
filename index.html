@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Opening Screen -->
     <div id="opening-screen">
         <div class="opening-bg"></div>
         <div class="opening-content">
@@ -25,9 +27,11 @@
         </div>
     </div>
 
+    <!-- Main Content -->
     <div id="main-content" class="hidden">
-        <div class="container">
-            <div class="left-panel">
+        <div class="main-container">
+            <!-- Left Panel -->
+            <div class="left-panel d-none d-lg-block">
                 <div class="hero-bg"></div>
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
@@ -54,25 +58,31 @@
                 </div>
             </div>
 
+            <!-- Right Panel -->
             <div class="right-panel">
+                <!-- Music Control -->
                 <div id="music-btn" class="music-control">
                     <i class="fas fa-play"></i>
                 </div>
                 <audio id="bg-music" loop>
-                    <source src="assets/lagu.mp3" type="audio/mpeg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
                 </audio>
 
-                <section class="section section-quote animate-section">
+                <!-- Section: Quote -->
+                <section class="section section-quote">
+                    <div class="floral-top"></div>
                     <p class="quote-text">
                         "Assalamualaikum Warahmatullahi Wabarakatuh with the blessing and mercy from Allah SWT, We cordially invite you to the wedding of:"
                     </p>
                 </section>
 
-                <section class="section section-couple animate-section">
+                <!-- Section: Couple -->
+                <section class="section section-couple">
                     <h2 class="section-title script">The Wedding Of</h2>
                     
-                    <div class="couple-card animate-section slide-left">
+                    <div class="couple-card">
                         <div class="couple-photo-frame">
+                            <img src="assets/ornate_gold_text_frame.png" alt="Groom Frame" class="photo-frame-img">
                             <img src="assets/watercolor_groom_portrait_placeholder.png" alt="Groom" class="couple-photo">
                         </div>
                         <h3 class="couple-name script">Akbar Ardhana Putra</h3>
@@ -82,10 +92,11 @@
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
 
-                    <p class="couple-ampersand script animate-section">&</p>
+                    <p class="couple-ampersand script">&</p>
 
-                    <div class="couple-card animate-section slide-right">
+                    <div class="couple-card">
                         <div class="couple-photo-frame">
+                            <img src="assets/ornate_gold_text_frame.png" alt="Bride Frame" class="photo-frame-img">
                             <img src="assets/watercolor_bride_portrait_placeholder.png" alt="Bride" class="couple-photo">
                         </div>
                         <h3 class="couple-name script">Sabrina Salma Rachmina</h3>
@@ -96,40 +107,52 @@
                     </div>
                 </section>
 
-                <section class="section section-countdown animate-section">
+                <!-- Section: Countdown -->
+                <section class="section section-countdown">
                     <div class="countdown-frame">
                         <img src="assets/floral_vintage_frame_vertical.png" alt="Countdown Frame" class="countdown-frame-img">
                         <div class="countdown-content">
                             <h2 class="section-title script">Countdown</h2>
                             <div class="countdown-wrapper">
-                                <div class="countdown-item">
-                                    <span id="days" class="countdown-number">00</span>
-                                    <span class="countdown-label">Hari</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="hours" class="countdown-number">00</span>
-                                    <span class="countdown-label">Jam</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="minutes" class="countdown-number">00</span>
-                                    <span class="countdown-label">Menit</span>
-                                </div>
-                                <div class="countdown-item">
-                                    <span id="seconds" class="countdown-number">00</span>
-                                    <span class="countdown-label">Detik</span>
+                                <div class="row g-2 g-md-3 justify-content-center">
+                                    <div class="col-3">
+                                        <div class="countdown-item">
+                                            <span id="days" class="countdown-number">00</span>
+                                            <span class="countdown-label">Hari</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="countdown-item">
+                                            <span id="hours" class="countdown-number">00</span>
+                                            <span class="countdown-label">Jam</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="countdown-item">
+                                            <span id="minutes" class="countdown-number">00</span>
+                                            <span class="countdown-label">Menit</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="countdown-item">
+                                            <span id="seconds" class="countdown-number">00</span>
+                                            <span class="countdown-label">Detik</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="section section-events animate-section">
+                <!-- Section: Events -->
+                <section class="section section-events">
                     <button class="btn-calendar"><i class="far fa-calendar-alt"></i> Add to Calendar</button>
                     <h2 class="section-title script">It's Wedding Day!</h2>
-                    <p class="event-date">Tuesday</p>
-                    <p class="event-date-big">23 Desember 2025</p>
+                    <p class="event-date">Monday</p>
+                    <p class="event-date-big">23 Februari 2026</p>
                     
-                    <div class="event-card animate-section slide-left">
+                    <div class="event-card">
                         <div class="event-ornament left"></div>
                         <div class="event-ornament right"></div>
                         <h3 class="event-title script">Akad</h3>
@@ -139,7 +162,7 @@
                         <button class="btn-maps"><i class="fas fa-map-marker-alt"></i> View Maps</button>
                     </div>
 
-                    <div class="event-card animate-section slide-right">
+                    <div class="event-card">
                         <div class="event-ornament left"></div>
                         <div class="event-ornament right"></div>
                         <h3 class="event-title script">Resepsi</h3>
@@ -150,70 +173,88 @@
                     </div>
                 </section>
 
-                <section class="section section-story animate-section">
+                <!-- Section: Our Story -->
+                <section class="section section-story">
                     <h2 class="section-title script">Our Story</h2>
-                    <div class="story-photo animate-section slide-left">
+                    <div class="story-photo">
                         <img src="assets/muslim_wedding_watercolor_0.jpg" alt="Our Story">
                     </div>
-                    <h3 class="story-subtitle animate-section">Perjalanan Cinta Kami</h3>
-                    <p class="story-text animate-section">Dengan memohon rahmat Allah SWT, kami dipertemukan dalam perjalanan hidup. Dari pertama bertemu hingga memutuskan untuk membangun rumah tangga, setiap langkah kami dilandasi oleh cinta, kepercayaan, dan keyakinan bahwa Allah adalah yang terbaik dalam mengatur segala sesuatu.</p>
+                    <h3 class="story-subtitle">Perjalanan Cinta Kami</h3>
+                    <p class="story-text">Dengan memohon rahmat Allah SWT, kami dipertemukan dalam perjalanan perjalanan hidup. Dari pertama bertemu hingga memutuskan untuk membangun rumah tangga, setiap langkah kami dilandasi oleh cinta, kepercayaan, dan keyakinan bahwa Allahlah yang terbaik dalam mengatur segala sesuatu.</p>
                 </section>
 
-                <section class="section section-gallery animate-section">
+                <!-- Section: Gallery -->
+                <section class="section section-gallery">
                     <h2 class="section-title script">Gallery</h2>
                     <div class="gallery-grid">
-                        <div class="gallery-item animate-section animate-delay-1">
-                            <img src="assets/floral_frame_border_8.jpg" alt="Gallery 1">
-                        </div>
-                        <div class="gallery-item animate-section animate-delay-2">
-                            <img src="assets/gold_wedding_frame_2.jpg" alt="Gallery 2">
-                        </div>
-                        <div class="gallery-item animate-section animate-delay-3">
-                            <img src="assets/vintage_carousel_watercolor_2.jpg" alt="Gallery 3">
-                        </div>
-                        <div class="gallery-item animate-section animate-delay-1">
-                            <img src="assets/wedding_background_4.jpg" alt="Gallery 4">
-                        </div>
-                        <div class="gallery-item animate-section animate-delay-2">
-                            <img src="assets/floral_frame_border_7.jpg" alt="Gallery 5">
-                        </div>
-                        <div class="gallery-item animate-section animate-delay-3">
-                            <img src="assets/muslim_wedding_watercolor_4.jpg" alt="Gallery 6">
+                        <div class="row g-2">
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/floral_frame_border_8.jpg" alt="Gallery 1">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/gold_wedding_frame_2.jpg" alt="Gallery 2">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/vintage_carousel_watercolor_2.jpg" alt="Gallery 3">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/wedding_background_4.jpg" alt="Gallery 4">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/floral_frame_border_7.jpg" alt="Gallery 5">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="gallery-item">
+                                    <img src="assets/muslim_wedding_watercolor_4.jpg" alt="Gallery 6">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="section section-rsvp animate-section">
+                <!-- Section: RSVP -->
+                <section class="section section-rsvp">
                     <h2 class="section-title script">Reservation</h2>
                     <form id="rsvp-form" class="rsvp-form">
-                        <div class="form-group animate-section slide-left">
+                        <div class="form-group mb-3">
                             <div class="input-icon">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="name" placeholder="Nama Lengkap" required>
+                                <input type="text" id="name" class="form-control" placeholder="Nama Lengkap" required>
                             </div>
                         </div>
-                        <div class="form-group animate-section slide-right">
+                        <div class="form-group mb-3">
                             <div class="input-icon">
-                                <span class="label-text"></span>
-                                <select id="attendance" required>
+                                <span class="label-text">Kehadiran</span>
+                                <select id="attendance" class="form-select" required>
                                     <option value="">Apakah kamu akan hadir?</option>
                                     <option value="hadir">Ya, saya akan hadir</option>
                                     <option value="tidak">Maaf, saya tidak bisa hadir</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group animate-section">
-                            <textarea id="message" placeholder="Tulis ucapan untuk mempelai..."></textarea>
+                        <div class="form-group mb-3">
+                            <textarea id="message" class="form-control" placeholder="Tulis ucapan untuk mempelai..."></textarea>
                         </div>
-                        <button type="submit" class="btn-submit animate-section">Kirim Ucapan</button>
+                        <button type="submit" class="btn-submit w-100">Kirim Ucapan</button>
                     </form>
                 </section>
 
-                <section class="section section-gift animate-section">
+                <!-- Section: Gift -->
+                <section class="section section-gift">
                     <div class="gift-frame">
                         <h2 class="section-title script">Wedding Gift</h2>
                         <p class="gift-text">Your blessing and coming to our wedding are enough for us. However, if you want to give a gift we provide a Digital Envelope to make it easier for you, thank you</p>
-                        <div class="gift-tabs">
+                        <div class="gift-tabs d-flex justify-content-center gap-2 flex-wrap">
                             <button class="gift-tab active" data-tab="angpao">E-Angpao</button>
                             <button class="gift-tab" data-tab="registry">Gift Registry</button>
                         </div>
@@ -232,7 +273,8 @@
                     </div>
                 </section>
 
-                <footer class="footer animate-section">
+                <!-- Footer -->
+                <footer class="footer">
                     <h2 class="footer-names script">Akbar & Salma</h2>
                     <p class="footer-text">Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan do'a restu kepada kami.</p>
                     <p class="footer-thanks">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
@@ -242,6 +284,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
