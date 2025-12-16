@@ -196,7 +196,7 @@ body {
     letter-spacing: 4px;
     color: var(--text);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 500;
     text-shadow: 0 0 3px rgba(255,255,255,0.6);
 }
@@ -225,17 +225,18 @@ body {
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
     margin: 0 20px;
-    padding: 15px 25px;
-    border-radius: 25px;
+    padding: 6px 18px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     border: 1px solid rgba(255,255,255,0.3);
     z-index: 3;
 }
 
 .hero-to {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.2;
     color: var(--text-light);
 }
 
@@ -524,7 +525,7 @@ body {
 
 .countdown-item {
     background: transparent;
-    padding: 5px 0
+    padding: 5px 0;
     border-radius: 0;
     box-shadow: none;
     border: none;
@@ -555,6 +556,24 @@ body {
     letter-spacing: 1px;
     color: var(--text-light);
     font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .countdown-frame-img {
+        transform: translate(-50%, -50%) scale(1.8); /* Bunga lebih besar di HP */
+    }
+    
+    .countdown-item {
+        min-width: 45px; /* Lebih rapat lagi di HP */
+    }
+    
+    .countdown-number {
+        font-size: 1.4rem; /* Angka mengecil agar muat */
+    }
+
+    .countdown-content {
+        transform: translateY(10px); /* Geser angka naik/turun sedikit jika tidak pas di tengah */
+    }
 }
 
 /* Events Section */
@@ -1134,3 +1153,4 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
